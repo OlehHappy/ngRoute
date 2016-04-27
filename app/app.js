@@ -8,14 +8,14 @@ sampleApp.config(['$routeProvider', '$locationProvider',
 		controller: 'ShowOrderController'
       });
 
-  	// $locationProvider.html5Mode({
-  	// 	enabled: true,
-  	// 	requireBase: false
-  	// });
+    $locationProvider.html5Mode({
+	  enabled: true,
+	  requireBase: false
+	});
 }]);
 
 
-sampleApp.controller('ShowOrderController', function($scope, $routeParams) {
+sampleApp.controller('ShowOrderController', function($scope, $routeParams, $location) {
 
 	
 	$scope.order_id = $routeParams.orderId;
